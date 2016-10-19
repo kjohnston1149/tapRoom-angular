@@ -6,11 +6,7 @@ import { Beer } from './beer.model';
   template: `
   <div class="container">
   <h3> Welcome to the Taproom!</h3>
-  <beers></beers>
-
-  <beer-list
-      [childBeerList]="masterBeerList"
-      (clickSender)="showDetails($event)"></beer-list>
+  <beer-list></beer-list>
    <edit-beer
       [childSelectedBeer]="selectedBeer"
       (doneClickedSender)="finishedEditing()"></edit-beer>
@@ -21,6 +17,10 @@ import { Beer } from './beer.model';
 
 export class AppComponent {
   public masterBeerList: Beer[] = [
+    new Beer("pFriem CDA", "Caldera Pilot Rock Porter", 6, "5%"),
+    new Beer("Black Butte Porter", "The Abyss Deschuttes ipa", 7.5, "9%"),
+    new Beer("Apricot Goose De Garde Brewing Saison", "Cascade Sang Nior Cascade Brewing", 7, "4.9%"),
+
   ];
   selectedBeer: Beer = null;
   showDetails(clickedBeer: Beer) {
@@ -29,7 +29,7 @@ export class AppComponent {
     finishedEditing() {
       this.selectedBeer = null;
     }
-    addBeer(newBeerFromChild: Beer) {
-      this.masterBeerList.push(newBeerFromChild);
-    }
+    // // addBeer(newBeerFromChild: Beer) {
+    // //   this.beer.push(newBeerFromChild);
+    // }
 }
