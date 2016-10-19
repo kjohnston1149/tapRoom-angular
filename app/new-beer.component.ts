@@ -26,17 +26,17 @@ import { Beer } from './beer.model';
         <br>
         <p> Click on the image below to submit </p>
       </div>
-        <button (click)="addClicked(newName.value, newBrand.value, newPrice.value, newAlcoholContent.value); newName.value=''; newBrand.value='';
+        <button (click)="addClicked(newName.value, newBrand.value, newPrice.value, newAlcoholContent.value, newImageFilePath.value); newName.value=''; newBrand.value='';
         newPrice.value='';
-        newAlcoholContent.value='';"><img src="ipa.jpeg" alt="ipa"></button>
+        newAlcoholContent.value=''; newImageFilePath.value=''"><img src="ipa.jpeg" alt="ipa"></button>
     </div>
   `
 })
 
 export class NewBeerComponent {
   @Output() newBeerSender = new EventEmitter();
-  addClicked(name: string, brand: string, price: number, alcoholContent: string) {
-    var newBeerToAdd: Beer = new Beer(name, brand, price, alcoholContent);
+  addClicked(name: string, brand: string, price: number, alcoholContent: string, imageFilePath: string) {
+    var newBeerToAdd: Beer = new Beer(name, brand, price, alcoholContent, imageFilePath);
     this.newBeerSender.emit(newBeerToAdd);
   }
 }

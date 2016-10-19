@@ -5,7 +5,8 @@ import { Beer } from './beer.model';
   selector: 'my-app',
   template: `
   <div class="container">
-  <h3> Welcome to the Taproom!</h3>
+  <h1> Welcome to the Taproom!</h1>
+  <h2> Here's a list of our current specialty beers on tap:</h2>
   <beer-list
     [childBeerList]="masterBeerList"
     (clickSender)="showDetails($event)"></beer-list>
@@ -20,9 +21,9 @@ import { Beer } from './beer.model';
 
 export class AppComponent {
   public masterBeerList: Beer[] = [
-    new Beer("pFriem CDA", "Caldera Pilot Rock Porter", 6, "5%"),
-    new Beer("Black Butte Porter", "The Abyss Deschuttes ipa", 7.5, "9%"),
-    new Beer("Apricot Goose De Garde Brewing Saison", "Cascade Sang Nior Cascade Brewing", 7, "4.9%"),
+    new Beer("pFriem CDA", "Caldera Pilot Rock Porter", 6, "5%", "pfriem.jpeg"),
+    new Beer("Black Butte Porter", "The Abyss Deschuttes ipa", 7.5, "9%", "butte.jpg"),
+    new Beer("Apricot Goose De Garde Brewing Saison", "Cascade Sang Nior Cascade Brewing", 7, "4.9%", "saison.jpg"),
 
   ];
   selectedBeer: Beer = null;

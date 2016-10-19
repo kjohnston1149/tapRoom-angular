@@ -3,7 +3,25 @@ img {
   height: 100px;
 }
 
-h3 {
+h1 {
+  color: #D66045;
+  font-family: arial;
+}
+
+h2 {
+  color: #D66045;
+  font-family: arial;
+}
+
+button {
+  background-color: #C26B13;
+}
+
+p {
   color: #C26B13;
-  font-family: cursive;
+  font-family: arial;
+}
+
+body {
+  background-color: #FADBD4;
 }

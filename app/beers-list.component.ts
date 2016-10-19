@@ -5,7 +5,8 @@ import { Beer } from './beer.model';
   selector: 'beer-list',
   template:`
   <div *ngFor="let currentBeer of childBeerList">
-  <h3> {{ currentBeer.name }} </h3>
+  <h2> {{ currentBeer.name }} </h2>
+  <img src={{currentBeer.imageFilePath}}>
   <p>Pints left : {{ currentBeer.amountLeft }}</p>
   <button (click)="subtractOnePint(currentBeer)"></button>
   <br>
