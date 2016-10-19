@@ -8,11 +8,14 @@ import { Beer } from './beer.model';
   <h3> Welcome to the Taproom!</h3>
   <beer-list
     [childBeerList]="masterBeerList"
-    (clickSender)="showDeatils($event)"></beer-list>
+    (clickSender)="showDetails($event)"
+    ></beer-list>
    <edit-beer
-      [childSelectedBeer]="selectedBeer"
-      (doneClickedSender)="finishedEditing()"></edit-beer>
-   <new-beer (newBeerSender)="addBeer($event)"></new-beer>
+   [childSelectedBeer]="selectedBeer"
+   (doneClickedSender)="finishedEditing()"
+   ></edit-beer>
+   <new-beer (newBeerSender)="addBeer($event)"
+   ></new-beer>
   </div>
   `
 })
@@ -28,10 +31,12 @@ export class AppComponent {
   showDetails(clickedBeer: Beer) {
     this.selectedBeer = clickedBeer;
   }
-    finishedEditing() {
-      this.selectedBeer = null;
-    }
-    // // addBeer(newBeerFromChild: Beer) {
-    // //   this.beer.push(newBeerFromChild);
-    // }
+
+  finishedEditing() {
+    this.selectedBeer = null;
+  }
+  addBeer(newBeerFromChild: Beer) {
+    this.masterBeerList.push(newBeerFromChild);
+  }
+
 }

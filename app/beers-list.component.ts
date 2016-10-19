@@ -12,9 +12,9 @@ import { Beer } from './beer.model';
 })
 
 export class BeerListComponent {
-  @Input() childBeerList: Task[];
+  @Input() childBeerList: Beer[];
   @Output() clickSender = new EventEmitter();
-  editButtonHasBeenClicked(beerToEdit: Task) {
+  editButtonHasBeenClicked(beerToEdit: Beer) {
     this.clickSender.emit(beerToEdit);
   }
 }

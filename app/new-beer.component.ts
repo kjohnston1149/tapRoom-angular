@@ -15,10 +15,7 @@ import { Beer } from './beer.model';
         <label> Enter Beer Brand:</label>
         <input #newBrand class="form-control">
       </div>
-      <div class="form-group">
-        <label> Enter Beer Name:</label>
-        <input #newBrand class="form-control">
-      </div>
+  
       <div class="form-group">
         <label> Enter Beer Price:</label>
         <input #newPrice class="form-control">

@@ -2,9 +2,9 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 import { AppComponent }   from './app.components';
-import { EditBeerComponent } from './edit-beer.component';
 import { NewBeerComponent } from './new-beer.component';
 import { BeerListComponent } from './beers-list.component';
+import { EditBeerComponent } from './edit-beer.component';
 
 @NgModule({
   imports: [
@@ -13,9 +13,9 @@ import { BeerListComponent } from './beers-list.component';
   ],
   declarations: [
     AppComponent,
-    EditBeerComponent,
     NewBeerComponent,
     BeerListComponent,
+    EditBeerComponent,
   ],
   bootstrap:    [ AppComponent ]
 })

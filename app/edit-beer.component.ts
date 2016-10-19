@@ -5,15 +5,23 @@ import { Beer } from './beer.model';
   selector: 'edit-beer',
   template: `
     <div *ngIf="childSelectedBeer">
-      <h1>Select Amount</h1>
+      <h1>Edit Beer</h1>
       <div>
-        <label>Enter Your Brand</label>
-        <input [(ngModel)]="childSelectedBeer.description">
+        <label>Name</label>
+        <input [(ngModel)]="childSelectedBeer.name">
       </div>
       <div>
-        <label>Enter Amount:</label>
-        <input [(ngModel)]="childSelectedBeer.id">
-        <button (click)="finishedEditing()">Done</button>
+        <label>Brand</label>
+        <input [(ngModel)]="childSelectedBeer.brand">
+      </div>
+      <div>
+        <label>Enter Price:</label>
+        <input [(ngModel)]="childSelectedBeer.price">
+      </div>
+      <div>
+        <label>Enter Alcohol Content:</label>
+        <input [(ngModel)]="childSelectedBeer.alcoholContent">
+        <button (click)="doneClicked()">Done</button>
       </div>
     </div>
   `
@@ -25,4 +33,4 @@ export class EditBeerComponent {
   doneClicked() {
     this.doneClickedSender.emit();
   }
-}
+  }
