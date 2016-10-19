@@ -6,15 +6,20 @@ import { Beer } from './beer.model';
   template:`
   <div *ngFor="let currentBeer of childBeerList">
   <h3> {{ currentBeer.name }} </h3>
+  <p>Pints left : {{ currentBeer.amountLeft }}</p>
+  <button (click)="subtractOnePint(currentBeer)"></button>
+  <br>
  <button (click)="editButtonHasBeenClicked(currentBeer)">Edit</button>
+
  </div>
   `
 })
+
 
 export class BeerListComponent {
   @Input() childBeerList: Beer[];
   @Output() clickSender = new EventEmitter();
   editButtonHasBeenClicked(beerToEdit: Beer) {
     this.clickSender.emit(beerToEdit);
+    }
   }
-}

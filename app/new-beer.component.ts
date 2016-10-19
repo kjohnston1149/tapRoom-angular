@@ -15,7 +15,7 @@ import { Beer } from './beer.model';
         <label> Enter Beer Brand:</label>
         <input #newBrand class="form-control">
       </div>
-  
+
       <div class="form-group">
         <label> Enter Beer Price:</label>
         <input #newPrice class="form-control">
@@ -28,14 +28,13 @@ import { Beer } from './beer.model';
       </div>
         <button (click)="addClicked(newName.value, newBrand.value, newPrice.value, newAlcoholContent.value); newName.value=''; newBrand.value='';
         newPrice.value='';
-        newAlcoholContent.value='';
-        "><img src="ipa.jpeg" alt="ipa"></button>
+        newAlcoholContent.value='';"><img src="ipa.jpeg" alt="ipa"></button>
     </div>
   `
 })
 
 export class NewBeerComponent {
-  @Output() newBeerSender = new EventEmitter()
+  @Output() newBeerSender = new EventEmitter();
   addClicked(name: string, brand: string, price: number, alcoholContent: string) {
     var newBeerToAdd: Beer = new Beer(name, brand, price, alcoholContent);
     this.newBeerSender.emit(newBeerToAdd);

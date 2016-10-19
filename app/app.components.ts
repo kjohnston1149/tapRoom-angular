@@ -8,14 +8,12 @@ import { Beer } from './beer.model';
   <h3> Welcome to the Taproom!</h3>
   <beer-list
     [childBeerList]="masterBeerList"
-    (clickSender)="showDetails($event)"
-    ></beer-list>
+    (clickSender)="showDetails($event)"></beer-list>
    <edit-beer
    [childSelectedBeer]="selectedBeer"
-   (doneClickedSender)="finishedEditing()"
-   ></edit-beer>
-   <new-beer (newBeerSender)="addBeer($event)"
-   ></new-beer>
+   (doneClickedSender)="finishedEditing()"></edit-beer>
+   <new-beer
+   (newBeerSender)="addBeer($event)"></new-beer>
   </div>
   `
 })
