@@ -6,7 +6,9 @@ import { Beer } from './beer.model';
   template: `
   <div class="container">
   <h3> Welcome to the Taproom!</h3>
-  <beer-list></beer-list>
+  <beer-list
+    [childBeerList]="masterBeerList"
+    (clickSender)="showDeatils($event)"></beer-list>
    <edit-beer
       [childSelectedBeer]="selectedBeer"
       (doneClickedSender)="finishedEditing()"></edit-beer>
