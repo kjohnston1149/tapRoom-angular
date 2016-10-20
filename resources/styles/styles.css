@@ -1,5 +1,10 @@
 img {
-  width: 170px;
+  width: 300px;
+  height: 300px;
+}
+
+#ipa {
+  width: 150px;
   height: 100px;
 }
 
@@ -14,7 +19,7 @@ h2 {
 }
 
 button {
-  background-color: #C26B13;
+  margin: 3px;
 }
 
 p {
@@ -24,4 +29,9 @@ p {
 
 body {
   background-color: #FADBD4;
+}
+
+
+h4 {
+  color: red;
 }

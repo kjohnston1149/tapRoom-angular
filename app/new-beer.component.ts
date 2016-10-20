@@ -26,9 +26,9 @@ import { Beer } from './beer.model';
         <br>
         <p> Click on the image below to submit </p>
       </div>
-        <button (click)="addClicked(newName.value, newBrand.value, newPrice.value, newAlcoholContent.value, newImageFilePath.value); newName.value=''; newBrand.value='';
+        <button class="btn btn-danger" (click)="addClicked(newName.value, newBrand.value, newPrice.value, newAlcoholContent.value, newImageFilePath.value); newName.value=''; newBrand.value='';
         newPrice.value='';
-        newAlcoholContent.value=''; newImageFilePath.value=''"><img src="ipa.jpeg" alt="ipa"></button>
+        newAlcoholContent.value=''; newImageFilePath.value=''"><img id="ipa" src="ipa.jpeg" alt="ipa"></button>
     </div>
   `
 })
