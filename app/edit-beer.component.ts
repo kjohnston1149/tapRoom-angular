@@ -5,6 +5,7 @@ import { Beer } from './beer.model';
   selector: 'edit-beer',
   template: `
     <div *ngIf="childSelectedBeer">
+    <div class="form">
       <h1>Edit Beer</h1>
       <div>
         <label>Name</label>
@@ -21,8 +22,9 @@ import { Beer } from './beer.model';
       <div>
         <label>Enter Alcohol Content:</label>
         <input [(ngModel)]="childSelectedBeer.alcoholContent">
-        <button (click)="doneClicked()">Done</button>
+        <button class="btn btn-danger" (click)="doneClicked()">Done</button>
       </div>
+    </div>
     </div>
   `
 })

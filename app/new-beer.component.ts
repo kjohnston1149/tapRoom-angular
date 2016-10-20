@@ -5,9 +5,10 @@ import { Beer } from './beer.model';
 @Component({
   selector: 'new-beer',
   template: `
-    <h3> New Beer </h3>
-    <div class="well">
+
+    <div class="container">
       <div class="form-group">
+      <h3> New Beer </h3>
         <label> Enter Beer Name:</label>
         <input #newName class="form-control">
       </div>
@@ -26,7 +27,7 @@ import { Beer } from './beer.model';
         <br>
         <p> Click on the image below to submit </p>
       </div>
-        <button class="btn btn-danger" (click)="addClicked(newName.value, newBrand.value, newPrice.value, newAlcoholContent.value, newImageFilePath.value); newName.value=''; newBrand.value='';
+        <button class="btn btn-danger" id="beer-button" (click)="addClicked(newName.value, newBrand.value, newPrice.value, newAlcoholContent.value, newImageFilePath.value); newName.value=''; newBrand.value='';
         newPrice.value='';
         newAlcoholContent.value=''; newImageFilePath.value=''"><img id="ipa" src="ipa.jpeg" alt="ipa"></button>
     </div>

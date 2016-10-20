@@ -5,17 +5,25 @@ import { Beer } from './beer.model';
   selector: 'my-app',
   template: `
   <div class="container">
-  <h1> Welcome to the Taproom!</h1>
+  <div class="header">
+
+  <h1 class = jumbotron> WeAreAPub</h1>
+  </div>
   <h2> Here's a list of our current specialty beers on tap:</h2>
   <beer-list
     [childBeerList]="masterBeerList"
     (clickSender)="showDetails($event)"></beer-list>
+    <br>
+    <br>
    <edit-beer
    [childSelectedBeer]="selectedBeer"
    (doneClickedSender)="finishedEditing()"></edit-beer>
+   <br>
+    <br>
    <new-beer
    (newBeerSender)="addBeer($event)"></new-beer>
   </div>
+
   `
 })
 
